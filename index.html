@@ -178,7 +178,7 @@
 		    	<li><a href="#">Menu 2</a></li>
 		    	<li><a href="#">Menu 3</a></li>
 		    </ul>
-		    <a href="#intro" data-rel="close">Close panel</a>
+		    <a href="#header" data-rel="close">Close panel</a>
 		</div><!-- /panel -->
 	<!-- endmenu -->
 </div><!-- /page -->
@@ -193,12 +193,72 @@
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
-		<p>I'm first in the source order so I'm shown as the page.</p>
-		<p>View internal page called <a href="#bar">bar</a></p>
+		<div data-role="tabs" id="tabs">
+			<div class="top-content center-text">
+				<div data-role="navbar">
+				    <ul>
+				      <li><a href="#one" data-ajax="false">one</a></li>
+				      <li><a href="#two" data-ajax="false">two</a></li>
+				      <li><a href="#three" data-ajax="false">three</a></li>
+				      <li><a href="#four" data-ajax="false">four</a></li>
+				      <li><a href="#five" data-ajax="false">five</a></li>
+				    </ul>
+				 </div>
+			</div>
+			<div class="middle-content">
+				<div id="one">
+					<ul data-role="listview" data-inset="true">
+				        <li><a href="#">Hill</a></li>
+				        <li><a href="#">Hill</a></li>
+				        <li><a href="#">Hill</a></li>
+				        <li><a href="#">Hill</a></li>
+				        <li><a href="#">Hill</a></li>
+				    </ul>
+				</div>
+				<div id="two">
+					<ul data-role="listview" data-inset="true">
+				        <li><a href="#">Hill 4</a></li>
+				        <li><a href="#">Hill 4</a></li>
+				        <li><a href="#">Hill 4</a></li>
+				        <li><a href="#">Hill 4</a></li>
+				        <li><a href="#">Hill 4</a></li>
+				    </ul>
+				</div>
+				<div id="three">
+					<ul data-role="listview" data-inset="true">
+				        <li><a href="#">Hill 1</a></li>
+				        <li><a href="#">Hill 1</a></li>
+				        <li><a href="#">Hill 1</a></li>
+				        <li><a href="#">Hill 1</a></li>
+				        <li><a href="#">Hill 1</a></li>
+				    </ul>
+				</div>
+				<div id="four">
+					<ul data-role="listview" data-inset="true">
+				        <li><a href="#">Hill 2</a></li>
+				        <li><a href="#">Hill 2</a></li>
+				        <li><a href="#">Hill 2</a></li>
+				        <li><a href="#">Hill 2</a></li>
+				        <li><a href="#">Hill 2</a></li>
+				    </ul>
+				</div>
+				<div id="five">
+					<ul data-role="listview" data-inset="true">
+				        <li><a href="#">Hill 3</a></li>
+				        <li><a href="#">Hill 3</a></li>
+				        <li><a href="#">Hill 3</a></li>
+				        <li><a href="#">Hill 3</a></li>
+				        <li><a href="#">Hill 3</a></li>
+				    </ul>
+				</div>
+			</div>
+			<div class="bottom-content">
+			</div>
+		</div>
 	</div><!-- /content -->
 
 	<div data-role="footer">
-		<h4>Page Footer</h4>
+		<!-- <h4>Page Footer</h4> -->
 	</div><!-- /footer -->
 
 	<!-- menu -->
