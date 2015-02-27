@@ -1,0 +1,55 @@
+/*utilities*/
+.center-text{
+	text-align: center;
+}
+img{
+	display: block;
+}
+/*end utilities*/
+/*general styling*/
+.logo img{
+	margin: 0 auto;
+	width: 200px;
+}
+.input-center .ui-select .ui-btn{
+	width: 69.5%;
+}
+.input-center .ui-input-text,
+.input-center .ui-btn{
+	width: 80%;
+	margin: 0 auto;
+}
+h1{
+	text-align: center;
+}
+/*end general styling*/
+
+#login .ui-content{
+	height: 100%;
+	min-height: 100%;
+}
+
+
+#login #txt-email{
+	/*width: 80%;*/
+}
+.top-content{
+	position: relative;
+}
+.top-content img{
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+.top-content p{
+	position: absolute;
+	z-index: 1;
+	background: rgba(0,0,0,0.5);
+	top: 50%;
+	margin: 0 auto;
+	width: 90%;
+	color: white;
+	display: block;
+	padding: 2.5% 5%;
+	font-size: 30px;
+}
