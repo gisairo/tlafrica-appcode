@@ -104,37 +104,38 @@
 
 <!-- Start of first page/recovery -->
 <div data-role="page" id="recovery">
+	<div class="overlay">
+		<div data-role="header">
+			
+		</div><!-- /header -->
 
-	<div data-role="header">
-		
-	</div><!-- /header -->
-
-	<div role="main" class="ui-content">
-		<div class="logo">
-			<img src="http://placehold.it/200" alt="">
-		</div>
-		<div class="auth-titles center-text">
-			<h1>Password Reset</h1>
-			<p>Please enter your email to reset your password</p>
-		</div>
-		<form id="register-form" class="input-center" action="#" method="post" accept-charset="utf-8">
-			<div class="ui-field-contain">
-			    <input name="txt-rst-email" id="txt-rst-email" placeholder="Email" value="" type="email">
+		<div role="main" class="ui-content">
+			<div class="logo">
+				<img src="http://placehold.it/200" alt="">
 			</div>
-			<div class="ui-field-contain">
-			    <button type="submit" id="btn-reset" class="ui-shadow ui-btn ui-corner-all ui-mini">Reset Passowrd</button>
+			<div class="auth-titles center-text">
+				<h1>Password Reset</h1>
+				<p>Please enter your email to reset your password</p>
 			</div>
-		</form>
-		<div class="register-links center-text">
-			<br>
-			<p><a href="#registration" data-transition="slidefade" data-direction="reverse" title="I want a new account">I want a new account</a></p>
+			<form id="register-form" class="input-center" action="#" method="post" accept-charset="utf-8">
+				<div class="ui-field-contain">
+				    <input name="txt-rst-email" id="txt-rst-email" placeholder="Email" value="" type="email">
+				</div>
+				<div class="ui-field-contain">
+				    <button type="submit" id="btn-reset" class="ui-shadow ui-btn ui-corner-all ui-mini">Reset Passowrd</button>
+				</div>
+			</form>
+			<div class="register-links center-text">
+				<br>
+				<p><a href="#registration" data-transition="slidefade" data-direction="reverse" data-icon="arrow-r" title="I want a new account" >I want a new account</a></p>
 
-		</div>
-	</div><!-- /content -->
+			</div>
+		</div><!-- /content -->
 
-	<div data-role="footer">
-		
-	</div><!-- /footer -->
+		<div data-role="footer">
+			
+		</div><!-- /footer -->
+	</div>
 </div><!-- /page -->
 
 <!-- Start of second page/intro -->
@@ -144,7 +145,7 @@
 		<!-- <input data-icon="back" data-iconpos="left" value="" type="button"> -->
 		<a href="#login" class="ui-btn ui-btn-left ui-corner-all ui-btn-inline ui-icon-carat-l ui-btn-icon-notext"></a>
 		<h1>Thousand Hills International University</h1>
-		<a href="#mypanelmenu" class="ui-btn ui-btn-right ui-corner-all ui-btn-icon-right ui-btn-inline ui-icon-bars ui-btn-icon-notext"></a>
+		<a href="#mypanelmenu6" class="ui-btn ui-btn-right ui-corner-all ui-btn-icon-right ui-btn-inline ui-icon-bars ui-btn-icon-notext"></a>
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
@@ -161,9 +162,13 @@
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
 		
-		<p><a href="#listing" class="ui-btn ui-btn-icon-right ui-icon-arrow-r">Contribute to a hill</a></p>
-		<div class="bottom-content">
-			<p>social media links here</p>
+		<p><a href="#listing" id="btn-listing" class="ui-btn ui-btn-icon-right ui-icon-arrow-r">Contribute to a hill</a></p>
+		<div class="bottom-content center-text">
+			<p>Visit our social media pages</p>
+			<ul class="socialmedia">
+				<li><a href="#" id="facebook">Facebook</a></li>
+				<li><a href="#" id="twitter">Twitter</a></li>
+			</ul>
 		</div>
 	</div><!-- /content -->
 
@@ -171,14 +176,15 @@
 		<!-- <h4>Page Footer</h4> --> 
 	</div><!-- /footer -->
 	<!-- menu -->
-		<div data-role="panel" id="mypanelmenu" data-position="right">
+		<div data-role="panel" id="mypanelmenu6" data-position="right" data-theme="none">
 		    <!-- panel content goes here -->
-		    <ul>
-		    	<li><a href="#">Menu 1</a></li>
-		    	<li><a href="#">Menu 2</a></li>
-		    	<li><a href="#">Menu 3</a></li>
+		    <ul class="nav" data-role="listview" data-theme="none">
+		    	<li data-icon='home'><a href="#intro">Home</a></li>
+		    	<li data-icon='gear'><a href="#profile">Profile</a></li>
+		    	<li data-icon='lock'><a href="#">Log Out</a></li>
+		    	<li data-icon='delete'><a href="#" data-rel="close">Close Menu</a>
+</li>
 		    </ul>
-		    <a href="#header" data-rel="close">Close panel</a>
 		</div><!-- /panel -->
 	<!-- endmenu -->
 </div><!-- /page -->
@@ -278,68 +284,196 @@
 <!-- Start of  page/individual -->
 <div data-role="page" id="individual">
 
-	<div data-role="header">
-		<h1>Bar</h1>
+	<div data-role="header" id="header" data-add-back-btn="true">
+		<!-- <input data-icon="back" data-iconpos="left" value="" type="button"> -->
+		<h1>Thousand Hills International University</h1>
+		<a href="#mypanelmenu1" class="ui-btn ui-btn-right ui-corner-all ui-btn-icon-right ui-btn-inline ui-icon-bars ui-btn-icon-notext"></a>
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
-		<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-		<p><a href="#foo">Back to foo</a></p>
+		<div class="top-content center-text">
+			<img src="http://lorempixel.com/400/100" alt="#">
+			<p>About T.H.I.U</p>
+		</div>
+		<div class="middle-content">
+			<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+
+		</div>
+		<div class="bottom-content">
+			<p>Donate to a hill using <a href="#listing">Paypal</a></p>
+			<p>Donate to a hill using your <a href="#credit-details">Creditcard</a></p>
+		</div>
 	</div><!-- /content -->
 
 	<div data-role="footer">
-		<h4>Page Footer</h4>
+		
 	</div><!-- /footer -->
+
+	<!-- menu -->
+		<div data-role="panel" id="mypanelmenu1" data-position="right">
+		    <!-- panel content goes here -->
+		    <ul>
+		    	<li><a href="#">Menu 1</a></li>
+		    	<li><a href="#">Menu 2</a></li>
+		    	<li><a href="#">Menu 3</a></li>
+		    </ul>
+		    <a href="#listing" data-rel="close">Close panel</a>
+		</div><!-- /panel -->
+	<!-- endmenu -->
+
 </div><!-- /page -->
 
 <!-- Start of credit/donation page -->
 <div data-role="page" id="credit-details">
 
-	<div data-role="header">
-		<h1>Foo</h1>
+	<div data-role="header" id="header" data-add-back-btn="true">
+		<!-- <input data-icon="back" data-iconpos="left" value="" type="button"> -->
+		<h1>Thousand Hills International University</h1>
+		<a href="#mypanelmenu2" class="ui-btn ui-btn-right ui-corner-all ui-btn-icon-right ui-btn-inline ui-icon-bars ui-btn-icon-notext"></a>
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
-		<p>I'm first in the source order so I'm shown as the page.</p>
-		<p>View internal page called <a href="#bar">bar</a></p>
+		<div class="top-content center-text">
+			<img src="http://lorempixel.com/400/100" alt="#">
+			<p>About T.H.I.U</p>
+		</div>
+		<div class="middle-content">
+			<p>Please fill the details below to make your donation</p>
+			<form id="credi-form" class="input-center" action="#" method="post" accept-charset="utf-8">
+			
+	
+				<div class="ui-field-contain">
+				    <input name="txt-email" id="txt-email" placeholder="First Name" value="" type="text">
+				</div>
+				<div class="ui-field-contain">
+				    <input name="txt-email" id="txt-email" placeholder="Last Name" value="" type="text">
+				</div>
+				<div class="ui-field-contain">
+				    <input name="txt-email" id="txt-email" placeholder="Billing Address" value="" type="text">
+				</div>
+				<div class="ui-field-contain">
+				    <input name="txt-email" id="txt-email" placeholder="Country" value="" type="text">
+				</div>
+				<div class="ui-field-contain">
+				    <input name="txt-email" id="txt-email" placeholder="City" value="" type="text">
+				</div>
+				<div class="ui-field-contain">
+				    <input name="txt-email" id="txt-email" placeholder="State" value="" type="text">
+				</div>
+				<div class="ui-field-contain">
+				    <input name="txt-email" id="txt-email" placeholder="Zip Code" value="" type="text">
+				</div>
+				<div class="ui-field-contain">
+				    <input name="txt-email" id="txt-email" placeholder="Email" value="" type="email">
+				</div>
+				<div class="ui-field-contain">
+				    <input name="txt-email" id="txt-email" placeholder="Credit Card Number" value="" type="text">
+				</div>
+
+				<div class="ui-field-contain">
+				    <button type="submit" id="btn-submit-credit" class="ui-shadow ui-btn ui-corner-all ui-mini ui-btn-icon-right ui-icon-arrow-r">Submit</button>
+				</div>
+						
+		</form>
+
+		</div>
+		<div class="bottom-content">
+			
+		</div>
 	</div><!-- /content -->
 
 	<div data-role="footer">
-		<h4>Page Footer</h4>
+		
 	</div><!-- /footer -->
+	<!-- menu -->
+		<div data-role="panel" id="mypanelmenu2" data-position="right">
+		    <!-- panel content goes here -->
+		    <ul>
+		    	<li><a href="#">Menu 1</a></li>
+		    	<li><a href="#">Menu 2</a></li>
+		    	<li><a href="#">Menu 3</a></li>
+		    </ul>
+		    <a href="#listing" data-rel="close">Close panel</a>
+		</div><!-- /panel -->
+	<!-- endmenu -->
 </div><!-- /page -->
 
 <!-- Start of thanks page -->
 <div data-role="page" id="thanks">
 
-	<div data-role="header">
-		<h1>Bar</h1>
+	
+	<div data-role="header" id="header" data-add-back-btn="true">
+		<!-- <input data-icon="back" data-iconpos="left" value="" type="button"> -->
+		<h1>Thousand Hills International University</h1>
+		<a href="#mypanelmenu3" class="ui-btn ui-btn-right ui-corner-all ui-btn-icon-right ui-btn-inline ui-icon-bars ui-btn-icon-notext"></a>
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
-		<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-		<p><a href="#foo">Back to foo</a></p>
+		<div class="top-content center-text">
+			<img src="http://lorempixel.com/400/100" alt="#">
+			<p>Thank You</p>
+		</div>
+		<div class="middle-content center-text">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat.  </p>
+		</div>
+		<div class="bottom-content">
+			
+		</div>
 	</div><!-- /content -->
 
 	<div data-role="footer">
-		<h4>Page Footer</h4>
+		
 	</div><!-- /footer -->
+	<!-- menu -->
+		<div data-role="panel" id="mypanelmenu3" data-position="right">
+		    <!-- panel content goes here -->
+		    <ul>
+		    	<li><a href="#">Menu 1</a></li>
+		    	<li><a href="#">Menu 2</a></li>
+		    	<li><a href="#">Menu 3</a></li>
+		    </ul>
+		    <a href="#" data-rel="close">Close panel</a>
+		</div><!-- /panel -->
+	<!-- endmenu -->
 </div><!-- /page -->
 <!-- Start of mountain search engine page -->
 <div data-role="page" id="mtserp">
 
-	<div data-role="header">
-		<h1>Bar</h1>
+	<div data-role="header" id="header" data-add-back-btn="true">
+		<!-- <input data-icon="back" data-iconpos="left" value="" type="button"> -->
+		<h1><a href="#intro" title="Home">Thousand Hills International University</a></h1>
+		<a href="#mypanelmenu4" class="ui-btn ui-btn-right ui-corner-all ui-btn-icon-right ui-btn-inline ui-icon-bars ui-btn-icon-notext"></a>
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
-		<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-		<p><a href="#foo">Back to foo</a></p>
+		<div class="top-content center-text">
+			<h1>Nyungwe hill</h1>
+		</div>
+		<div class="middle-content">
+			<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link 	that references my id is beeing clicked.</p>
+		</div>
+	    <div class="bottom-content">
+			<p><a href="#individual">Back to foo</a></p>
+		</div>
 	</div><!-- /content -->
 
 	<div data-role="footer">
-		<h4>Page Footer</h4>
+		<h4>Powered by Google</h4>
 	</div><!-- /footer -->
+	<!-- menu -->
+		<div data-role="panel" id="mypanelmenu4" data-position="right">
+		    <!-- panel content goes here -->
+		    <ul>
+		    	<li><a href="#">Menu 1</a></li>
+		    	<li><a href="#">Menu 2</a></li>
+		    	<li><a href="#">Menu 3</a></li>
+		    </ul>
+		    <a href="#" data-rel="close">Close panel</a>
+		</div><!-- /panel -->
+	<!-- endmenu -->
 </div><!-- /page -->
 </body>
 </html>
