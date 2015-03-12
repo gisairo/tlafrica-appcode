@@ -41,8 +41,11 @@ img{
 /*end utilities*/
 /*general styling*/
 .logo img{
-	margin: 0 auto;
-	width: 200px;
+	margin: 70px auto;
+	/*width: 200px;*/
+	max-width: 162px;
+	height: auto;
+	
 }
 .input-center .ui-select .ui-btn{
 	width: 64.5%;

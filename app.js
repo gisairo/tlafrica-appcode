@@ -185,7 +185,68 @@ $(function(){
 			},
 		});
 	});
-
+	//initiate registration page
+		//recovery page
+	$(document).on('pagecreate', '#registration', function(){
+		$(document).ready(function(){
+			$( "#register-form" ).validate({
+				rules: {
+					'txt-rg-email': {
+						required: true,
+						email: true,
+					},
+					txt_rg_password: {
+						minlength: 6,
+						required: true,	
+						
+						},
+					txt_rg_password_copy: {
+						minlength: 6,
+						required: true,
+						equalTo: "#txt_rg_password",
+					},
+					
+					
+				},
+				txt_rg_password: {
+		            equalTo: "Please ensure your passwords match"
+		        },
+		        errorPlacement: function( error, element ) {
+					error.insertAfter( element.parent() );
+				},
+				submitHandler: function (form) {
+					 $.ajax({
+					 		url: api_url+'register-user',
+				            data: {action : 'login', formData : $('#recovery-form').serialize()},
+				            type: 'post',                   
+				            async: 'true',
+				            dataType: 'json',
+				            beforeSend: function() {
+				                // This callback function will trigger before data is sent
+				             	$.mobile.loading( 'show' ); // This will show ajax spinner
+				            },
+				            complete: function() {
+				                // This callback function will trigger on data sent/received complete
+				                $.mobile.loading( 'hide' ); // This will hide ajax spinner
+				            },
+				            success: function (result) {
+				                if(result.status) {
+				                	$('#recovery-form .errors').html(result.message).show().css('color', 'green');
+				                                           
+				                } else {
+				                    $('#recovery-form .errors').html(result.message).show();
+				                }
+				            },
+				            error: function (request,error) {
+				                // This callback function will trigger on unsuccessful action                
+				                $('#errors').html("System error, we have notified the admin and the problem is being addressed").show();
+				            }
+					 });
+					return false;
+				},
+			});
+		});
+	});
 	// initiate listing page
 	// initiate individual page
 	// initiate credit card detail
