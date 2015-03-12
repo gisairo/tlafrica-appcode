@@ -315,3 +315,29 @@ html body .ui-group-theme-a .ui-bar-inherit{
 	position: absolute;
 	top: 0;
 }
+
+label.error {
+		color: red;
+		font-size: 16px;
+		font-weight: normal;
+		line-height: 1.4;
+		margin-top: 0.5em;
+		width: 100%;
+		float: none;
+		text-shadow: none;
+		width: 80%;
+		margin: 0.5em auto 0 auto;
+	}
+	#errors{
+		display: none;
+		color: red;
+		font-size: 16px;
+		font-weight: normal;
+		line-height: 1.4;
+		margin-top: 0.5em;
+		width: 100%;
+		float: none;
+		text-shadow: none;
+		width: 80%;
+		margin: 0.5em auto 0 auto;
+	}

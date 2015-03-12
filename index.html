@@ -8,8 +8,10 @@
 	<link rel="stylesheet" href="jqm/jquery.mobile-1.4.5.min.css" />
 	<link rel="stylesheet" type="text/css" href="app.css">
 	<script src="js/jquery-2.1.3.min.js"></script>
-	<script src="jqm/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
 	<script src="app.js"></script>
+	<script src="jqm/jquery.mobile-1.4.5.min.js"></script>
+	
 
 </head>
 <body>
@@ -26,9 +28,11 @@
 			<img src="http://placehold.it/200" alt="">
 		</div>
 		<h1>Login</h1>
-		<form id="login-form" class="input-center" action="#intro" method="post" accept-charset="utf-8">
+		<form id="login-form" data-ajax="false" class="input-center" action="#" method="post" accept-charset="utf-8">
 			
-	
+			<div id="errors">
+				
+			</div>
 			<div class="ui-field-contain">
 			    <input name="txt-email" id="txt-email" placeholder="Email" value="" type="email">
 			</div>
