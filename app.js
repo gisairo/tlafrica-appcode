@@ -1,5 +1,6 @@
 //js to load when device is ready e.g allow top ios app to be visible
 $(function(){
+	var api_url = 'http://localhost/thserve/'
 	var auth_token;
 
 	$( document ).on( "deviceready", function(){
@@ -91,7 +92,7 @@ $(function(){
 				error.insertAfter( element.parent() );
 			},
 			submitHandler: function (form) {
-		        $.ajax({url: 'http://localhost/thserve/login-user',
+		        $.ajax({url: api_url+'login-user',
 			            data: {action : 'login', formData : $('#login-form').serialize()},
 			            type: 'post',                   
 			            async: 'true',
@@ -137,7 +138,27 @@ $(function(){
 		autologin();
 		// console.log('intro');
 	});
-	
+	//recovery page
+	$(document).on('pagecreate', '#recovery', function(){
+		$( "#recovery-form" ).validate({
+			rules: {
+				'txt-rst-email': {
+					required: true,
+					email: true,
+				},
+			},
+			'txt-email': {
+	            required: "Please format your email correctly."
+	        },
+	        errorPlacement: function( error, element ) {
+				error.insertAfter( element.parent() );
+			},
+			submitHandler: function (form) {
+				return false;
+			},
+		});
+	});
+
 	// initiate listing page
 	// initiate individual page
 	// initiate credit card detail
