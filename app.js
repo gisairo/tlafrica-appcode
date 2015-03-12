@@ -154,6 +154,33 @@ $(function(){
 				error.insertAfter( element.parent() );
 			},
 			submitHandler: function (form) {
+				 $.ajax({
+				 		url: api_url+'reset-user',
+			            data: {action : 'login', formData : $('#recovery-form').serialize()},
+			            type: 'post',                   
+			            async: 'true',
+			            dataType: 'json',
+			            beforeSend: function() {
+			                // This callback function will trigger before data is sent
+			             	$.mobile.loading( 'show' ); // This will show ajax spinner
+			            },
+			            complete: function() {
+			                // This callback function will trigger on data sent/received complete
+			                $.mobile.loading( 'hide' ); // This will hide ajax spinner
+			            },
+			            success: function (result) {
+			                if(result.status) {
+			                	$('#recovery-form .errors').html(result.message).show().css('color', 'green');
+			                                           
+			                } else {
+			                    $('#recovery-form .errors').html(result.message).show();
+			                }
+			            },
+			            error: function (request,error) {
+			                // This callback function will trigger on unsuccessful action                
+			                $('#errors').html("System error, we have notified the admin and the problem is being addressed").show();
+			            }
+				 });
 				return false;
 			},
 		});
