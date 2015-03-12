@@ -31,6 +31,9 @@ body{
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 }
+.ui-header .ui-title, .ui-footer .ui-title{
+	margin: 0 20%;
+}
 /*utilities*/
 .center-text{
 	text-align: center;
@@ -84,13 +87,14 @@ h1{
 	position: absolute;
 	z-index: 1;
 	background: rgba(0,0,0,0.5);
-	top: 50%;
+	top: 54%;
 	margin: 0 auto;
 	width: 90%;
 	color: white;
 	display: block;
 	padding: 2.5% 5%;
 	font-size: 30px;
+	text-shadow: none;
 }
 
 .ui-mobile .ui-page {
@@ -236,6 +240,9 @@ html body .ui-group-theme-a .ui-bar-inherit{
 .ui-page .ui-panel-wrapper{
 	background: rgba(247,148,29, 0.8);
 }
+#intro.ui-page .ui-panel-wrapper{
+	background: #fff;
+}
 
 .ui-footer{
 	border: 0 none;
@@ -331,6 +338,7 @@ label.error {
 		width: 80%;
 		margin: 0.5em auto 0 auto;
 	}
+	#register-form .errors,
 	#recovery-form .errors,
 	#errors{
 		display: none;
@@ -342,6 +350,11 @@ label.error {
 		width: 100%;
 		float: none;
 		text-shadow: none;
-		width: 80%;
+		width: 77%;
+		padding: 2%;
 		margin: 0.5em auto 0 auto;
+		background: #ebebeb;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
 	}

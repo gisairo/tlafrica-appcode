@@ -125,8 +125,9 @@ $(function(){
 			                }
 			            },
 			            error: function (request,error) {
-			                // This callback function will trigger on unsuccessful action                
-			                alert('Network error has occurred please try again!');
+			                // This callback function will trigger on unsuccessful action
+			                $('#errors').html('Network error has occurred please try again!').show();                
+			                
 			            }
 			        });  
 		        return false;
@@ -206,18 +207,19 @@ $(function(){
 						equalTo: "#txt_rg_password",
 					},
 					
-					
 				},
-				txt_rg_password: {
-		            equalTo: "Please ensure your passwords match"
-		        },
+				messages:{
+					txt_rg_password: {
+		            	equalTo: "Please ensure your passwords match"
+		        	}
+		    	},
 		        errorPlacement: function( error, element ) {
 					error.insertAfter( element.parent() );
 				},
 				submitHandler: function (form) {
 					 $.ajax({
-					 		url: api_url+'register-user',
-				            data: {action : 'login', formData : $('#recovery-form').serialize()},
+					 		url: api_url+'register-donor',
+				            data: {action : 'login', formData : $('#register-form').serialize()},
 				            type: 'post',                   
 				            async: 'true',
 				            dataType: 'json',
@@ -231,10 +233,17 @@ $(function(){
 				            },
 				            success: function (result) {
 				                if(result.status) {
-				                	$('#recovery-form .errors').html(result.message).show().css('color', 'green');
-				                                           
+				                	$('#register-form .errors').html(result.message).show().css('color', 'green');
+				                     
+				                    function gotologin() {
+										  setTimeout(
+										    function() {
+										      autologin(); 
+										    }, 5000);
+									}
+				                     gotologin();                    
 				                } else {
-				                    $('#recovery-form .errors').html(result.message).show();
+				                    $('#register-form .errors').html(result.message).show();
 				                }
 				            },
 				            error: function (request,error) {
