@@ -1,61 +1,16 @@
 //js to load when device is ready e.g allow top ios app to be visible
 $(function(){
-	var api_url = 'http://localhost/thserve/'
+	var api_url = 'http://sites.local/thserve/'
 	var auth_token;
 
-	$( document ).on( "deviceready", function(){
-		jQuery(document).ready(function($) {
-			console.log("ready");
-		});
+	// $( document ).on( "deviceready", function(){
+	// 	 console.log(window.stripe);
 
-	});
-
-	// $(document).on('pagecreate', '#login', function(){
-	//  	// var server_url = 'http://localhost/'  
-	//         $(document).on('submit', '#login-form', function(e) { // catch the form's submit event
-	//            e.preventDefault(); 
-	//            console.log('imefika hapa');
-	//             if($('#txt-email').val().length > 0 && $('#txt-password').val().length > 0){
-	//                 // Send data to server through the Ajax call
-	//                 // action is functionality we want to call and outputJSON is our data
-	//                     $.ajax({url: 'http://localhost/thserve/login-user',
-	//                         data: {action : 'login', formData : $('#login-form').serialize()},
-	//                         type: 'post',                   
-	//                         async: 'true',
-	//                         dataType: 'json',
-	//                         beforeSend: function() {
-	//                             // This callback function will trigger before data is sent
-	//                          	$.mobile.loading( 'show' ); // This will show ajax spinner
-	//                         },
-	//                         complete: function() {
-	//                             // This callback function will trigger on data sent/received complete
-	//                             $.mobile.loading( 'hide' ); // This will hide ajax spinner
-	//                         },
-	//                         success: function (result) {
-	//                             if(result.status) {
-	//                                 $.mobile.changePage("#second");
-	//                                  $(':mobile-pagecontainer').pagecontainer('change', '#intro', {
-	// 								        transition: 'slidefade',
-	// 								        changeHash: true,
-	// 								        reverse: true,
-	// 								        showLoadMsg: true
-	// 								    });                         
-	//                             } else {
-	//                                 alert('Logon unsuccessful!'); 
-	//                             }
-	//                         },
-	//                         error: function (request,error) {
-	//                             // This callback function will trigger on unsuccessful action                
-	//                             alert('Network error has occurred please try again!');
-	//                         }
-	//                     });                   
-	//             } else {
-	//                 alert('Please fill all necessary fields');
-	//             }    
-
-	//             // return false; // cancel original event to prevent form submitting
-	//         });    
 	// });
+
+	$(function() {
+	    FastClick.attach(document.body);
+	});
 	$(document).on('pagecreate', '#login', function(){
 		//auto login
 		if(window.localStorage){
@@ -115,7 +70,7 @@ $(function(){
 									// localStorage.setItem('mobile', response.mobile);
 									// localStorage.setItem('customer', response.customer);
 									// localStorage.setItem('person_sets_count', response.person_sets_count);
-									// localStorage.setItem('person_id', response.person_id);
+									localStorage.setItem('person_id', result.userid);
 								}
 								//go to next page
 								onLogin(login)
@@ -239,7 +194,7 @@ $(function(){
 										  setTimeout(
 										    function() {
 										      autologin(); 
-										    }, 5000);
+										    }, 1000);
 									}
 				                     gotologin();                    
 				                } else {
@@ -257,7 +212,100 @@ $(function(){
 		});
 	});
 	// initiate listing page
+	$(document).on('pagecreate', '#listing', function(){
+		
+		// //
+		// $(document).ready(function (e) {
+		// 	// $('.hlist > li> a.ui-btn').each(function(index, el) {
+		// 	// 	console.log(el);
+		// 	// });
+		// var lis = $( ".hlist li" );
+		// console.log(lis);
+ 
+			
+		// }); 
+		//
+		if (localStorage.auth_token) {
+			$.getJSON(api_url+'all-app-hills/1', function(hillsets){
+				// $.each(sets, function(){ addItem('myset', this); 
+				// console.log(hillsets);
+				$('#one ul').html(hillsets);
+
+			});
+			$('#twos').click(function (e) {
+				$.getJSON(api_url+'all-app-hills/101', function(hillsets){
+				// $.each(sets, function(){ addItem('myset', this); 
+					// console.log(hillsets);
+					$('#two ul').html(hillsets);
+
+				});
+			});
+			$('#threes').click(function (e) {
+				$.getJSON(api_url+'all-app-hills/201', function(hillsets){
+				// $.each(sets, function(){ addItem('myset', this); 
+					// console.log(hillsets);
+					$('#three ul').html(hillsets);
+
+				});
+			});
+			$('#fours').click(function (e) {
+				$.getJSON(api_url+'all-app-hills/301', function(hillsets){
+				// $.each(sets, function(){ addItem('myset', this); 
+					// console.log(hillsets);
+					$('#four ul').html(hillsets);
+
+				});
+			});
+			$('#fives').click(function (e) {
+				$.getJSON(api_url+'all-app-hills/401', function(hillsets){
+				// $.each(sets, function(){ addItem('myset', this); 
+					// console.log(hillsets);
+					$('#five ul').html(hillsets);
+
+				});
+			});
+			$(document).on("click", ".hlist ul li a" ,function (event) {
+			    var mtid= $(this).attr("data-id");
+			    localStorage.setItem('mountain_id', mtid);
+			    $(':mobile-pagecontainer').pagecontainer('change', '#individual', {
+			        transition: 'slide',
+			        changeHash: true,
+			        reverse: true,
+			        showLoadMsg: true
+			    }); 
+			});
+			 
+		}else{
+			
+			$(':mobile-pagecontainer').pagecontainer('change', '#login', {
+		        transition: 'slide',
+		        changeHash: true,
+		        reverse: true,
+		        showLoadMsg: true
+		    });
+		}
+	});
 	// initiate individual page
+	$(document).on('pagecreate', '#individual', function(){
+		if (localStorage.auth_token) {
+			mtid=localStorage.mountain_id;
+			person_id = localStorage.person_id;
+			$.getJSON(api_url+'one-app-hill/'+mtid, function(hilldata){
+				// $.each(sets, function(){ addItem('myset', this); 
+				// console.log(hillsets);
+				$('#individual .middle-content p').html(hilldata.content);
+				$('#google').html(hilldata.google);
+
+			});
+		}else{
+			$(':mobile-pagecontainer').pagecontainer('change', '#login', {
+		        transition: 'slide',
+		        changeHash: true,
+		        reverse: true,
+		        showLoadMsg: true
+		    });
+		}
+	});
 	// initiate credit card detail
 	function onLogin (login) {
 		if (login.auth_token) {
@@ -277,11 +325,11 @@ $(function(){
 
 		}
 			
-		console.log(login.auth_token);		
+		// console.log(login.auth_token);		
 		  
 	}
 	//logout
-	$('#logout').click(function(e) {
+	$('.logout').click(function(e) {
 		e.preventDefault();
 		if (window.localStorage) {
 			localStorage.removeItem('auth_token');
@@ -313,6 +361,83 @@ $(function(){
 			onLogin(login);
 		}
 	}
-	 
+	 // console.log(window);
 	// close anonymous function
+	// console.log(Stripe);
+	Stripe.setPublishableKey('pk_test_J66POIERnyrTbnKStD9AnA8v');
+    jQuery(function($) {
+      $('#credit-form').submit(function(event) {
+        var $form = $(this);
+        // Disable the submit button to prevent repeated clicks
+        $form.find('button').prop('disabled', true);
+        Stripe.card.createToken($form, stripeResponseHandler);
+        // Prevent the form from submitting with the default action
+        return false;
+      });
+      var stripeResponseHandler = function(status, response) {
+          var $form = $('#credit-form');
+          // console.log(status, JSON.stringify(response));
+
+          if (response.error) {
+            // Show the errors on the form
+           	 // console.log($form);
+            $form.find('.payment-errors').text(response.error.message).show();
+            $form.find('button').prop('disabled', false);
+          } else {
+
+            // token contains id, last4, and card type
+            var token = response.id;
+            // console.log(token)
+            // Insert the token into the form so it gets submitted to the server
+            $form.append($('<input type="hidden" name="stripeToken" />').val(token));
+            $form.append($('<input type="hidden" name="userid" />').val(localStorage.person_id));
+            $form.append($('<input type="hidden" name="mtid" />').val(localStorage.mountain_id));
+            // and submit
+            // $form.get(0).submit();
+            var cform=$form;
+            // console.log(cform.serialize());
+            //ajax submit to server
+            $.ajax({url: api_url+'save-donations',
+			            data: {action : 'charge', formData : cform.serialize()},
+			            type: 'post',                   
+			            async: 'true',
+			            dataType: 'json',
+			            beforeSend: function() {
+			                // This callback function will trigger before data is sent
+			             	$.mobile.loading( 'show' ); // This will show ajax spinner
+			            },
+			            complete: function() {
+			                // This callback function will trigger on data sent/received complete
+			                $.mobile.loading( 'hide' ); // This will hide ajax spinner
+			            },
+			            success: function (result) {
+			                if(result.status) {
+			                	$('.payment-errors').html(result.message).css('color', 'green').show();
+			                    $(':mobile-pagecontainer').pagecontainer('change', '#thanks', {
+							        transition: 'none',
+							        changeHash: true,
+							        reverse: true,
+							        showLoadMsg: true
+							    });                       
+			                } else {
+			                    $('.payment-errors').html(result.message).show();
+			                }
+			            },
+			            error: function (request,error) {
+			                // This callback function will trigger on unsuccessful action
+			                $('.payment-errors').html('Network error has occurred please try again!').show();                
+			                
+			            }
+			        });  
+
+            //end ajax submit
+          }
+        };
+    });
+
 });
+
+
+// document.addEventListener("deviceready", onDeviceReady, false);
+   
+	

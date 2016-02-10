@@ -5,13 +5,11 @@
 	 <meta charset="UTF-8"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="jqm/jquery.mobile-1.4.5.min.css" />
+	<!-- <link rel="stylesheet" href="jqm/jquery.mobile.custom.structure.min.css" /> -->
+	<!-- <link rel="stylesheet" href="jqm/jquery.mobile.custom.theme.min.css" /> -->
+	<link rel="stylesheet" href="jqm-o/jquery.mobile-1.4.5.min.css" />
 	<link rel="stylesheet" type="text/css" href="app.css">
-	<script src="js/jquery-2.1.3.min.js"></script>
-	<script src="js/jquery.validate.min.js"></script>
-	<script src="js/additional-methods.min.js"></script>
-	<script src="app.js"></script>
-	<script src="jqm/jquery.mobile-1.4.5.min.js"></script>
+	
 	
 
 </head>
@@ -166,20 +164,16 @@
 			<p>About T.H.I.U</p>
 		</div>
 		<div class="middle-content">
-			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p> TLAfrica and friends are raising funds to build 1000 hills university in Rwanda. This app is a major part of that effort, because it enables you to donate directly to this effort via your phone using your credit card and paypal.</p>
+			<p>Click on the yellow contribute to a hill button below to be taken to a list of hills you can choose to donate to. Click on each hill to get more information about that hill</p>
 		</div>
 		
 		<p><a href="#listing" id="btn-listing" class="ui-btn ui-btn-icon-right ui-icon-arrow-r">Contribute to a hill</a></p>
 		<div class="bottom-content center-text">
-			<p>Visit our social media pages</p>
+			<p class="weblink">Website: <a href="http://tlafrica.org/" target="_blank">http://tlafrica.org</a></p>
 			<ul class="socialmedia">
-				<li><a href="#" id="facebook">Facebook</a></li>
-				<li><a href="#" id="twitter">Twitter</a></li>
+				<li><a href="https://www.facebook.com/TLAfrica.org" id="facebook" target="_blank">Facebook</a></li>
+				<li><a href="https://twitter.com/tlafrica" id="twitter" target="_blank">Twitter</a></li>
 			</ul>
 		</div>
 	</div><!-- /content -->
@@ -192,8 +186,8 @@
 		    <!-- panel content goes here -->
 		    <ul class="nav" data-role="listview" data-theme="none">
 		    	<li data-icon='home'><a href="#intro" data-ajax="false" data-transition="slide">Home</a></li>
-		    	<li data-icon='gear'><a href="#individual" data-ajax="false" >Profile</a></li>
-		    	<li data-icon='lock'><a id="logout" href="#">Log Out</a></li>
+		    	<!-- <li data-icon='gear'><a href="#individual" data-ajax="false" >Profile</a></li> -->
+		    	<li data-icon='lock'><a class="logout" href="#">Log Out</a></li>
 		    	<li data-icon='delete'><a href="#" data-rel="close">Close Menu</a></li>
 		    </ul>
 		</div><!-- /panel -->
@@ -215,11 +209,11 @@
 				<div data-role="navbar">
 				    <ul>
 				    		
-						    <li><a href="#one" data-ajax="false">one</a></li>
-						    <li><a href="#two" data-ajax="false">two</a></li>
-						    <li><a href="#three" data-ajax="false">three</a></li>
-						    <li><a href="#four" data-ajax="false">four</a></li>
-						    <li><a href="#five" data-ajax="false">five</a></li>
+						    <li><a id="ones" href="#one" data-ajax="false">one</a></li>
+						    <li><a id="twos" href="#two" data-ajax="false">two</a></li>
+						    <li><a id="threes" href="#three" data-ajax="false">three</a></li>
+						    <li><a id="fours" href="#four" data-ajax="false">four</a></li>
+						    <li><a id="fives" href="#five" data-ajax="false">five</a></li>
 						    
 				    </ul>
 				    <div class="pager">
@@ -234,49 +228,29 @@
 				 </div>
 			</div>
 			<div class="middle-content">
-				<div id="one">
+				<div id="one" class="hlist">
 					<ul data-role="listview" data-inset="true">
-				        <li><a href="#">Hill</a></li>
-				        <li><a href="#">Hill</a></li>
-				        <li><a href="#">Hill</a></li>
-				        <li><a href="#">Hill</a></li>
-				        <li><a href="#">Hill</a></li>
+				        
 				    </ul>
 				</div>
-				<div id="two">
+				<div id="two" class="hlist">
 					<ul data-role="listview" data-inset="true">
-				        <li><a href="#">Hill 4</a></li>
-				        <li><a href="#">Hill 4</a></li>
-				        <li><a href="#">Hill 4</a></li>
-				        <li><a href="#">Hill 4</a></li>
-				        <li><a href="#">Hill 4</a></li>
+				       
 				    </ul>
 				</div>
-				<div id="three">
+				<div id="three" class="hlist">
 					<ul data-role="listview" data-inset="true">
-				        <li><a href="#">Hill 1</a></li>
-				        <li><a href="#">Hill 1</a></li>
-				        <li><a href="#">Hill 1</a></li>
-				        <li><a href="#">Hill 1</a></li>
-				        <li><a href="#">Hill 1</a></li>
+				        
 				    </ul>
 				</div>
-				<div id="four">
+				<div id="four" class="hlist">
 					<ul data-role="listview" data-inset="true">
-				        <li><a href="#">Hill 2</a></li>
-				        <li><a href="#">Hill 2</a></li>
-				        <li><a href="#">Hill 2</a></li>
-				        <li><a href="#">Hill 2</a></li>
-				        <li><a href="#">Hill 2</a></li>
+				        
 				    </ul>
 				</div>
-				<div id="five">
+				<div id="five" class="hlist">
 					<ul data-role="listview" data-inset="true">
-				        <li><a href="#">Hill 3</a></li>
-				        <li><a href="#">Hill 3</a></li>
-				        <li><a href="#">Hill 3</a></li>
-				        <li><a href="#">Hill 3</a></li>
-				        <li><a href="#">Hill 3</a></li>
+				        
 				    </ul>
 				</div>
 			</div>
@@ -294,8 +268,8 @@
 		    <!-- panel content goes here -->
 		    <ul class="nav" data-role="listview" data-theme="none">
 		    	<li data-icon='home'><a href="#intro">Home</a></li>
-		    	<li data-icon='gear'><a href="#profile">Profile</a></li>
-		    	<li data-icon='lock'><a href="#">Log Out</a></li>
+		    	<!-- <li data-icon='gear'><a href="#profile">Profile</a></li> -->
+		    	<li data-icon='lock'><a class="logout" href="#">Log Out</a></li>
 		    	<li data-icon='delete'><a href="#" data-rel="close">Close Menu</a></li>
 		    </ul>
 		</div><!-- /panel -->
@@ -314,7 +288,7 @@
 
 	<div role="main" class="ui-content">
 		<div class="top-content center-text">
-			<img src="http://lorempixel.com/400/100" alt="#">
+			<img src="images/header_image.png"  alt="#">
 			<p>About T.H.I.U</p>
 		</div>
 		<div class="middle-content">
@@ -322,8 +296,15 @@
 
 		</div>
 		<div class="bottom-content">
-			<p>Donate to a hill using <a href="#listing">Paypal</a></p>
+			<p>Find out more about the hill <span id="google"></span></p>
+			<p>Donate to a hill using <a target="_blank" href="http://tlafrica.org/index.php/support/thousand-hills-international-university">Paypal</a></p>
 			<p>Donate to a hill using your <a href="#credit-details">Creditcard</a></p>
+			<p>Donate directly to our bank:  </p>
+			<p>Ecobank</p>
+			<p>Account Name: TRANSFORMATIONAL LEADERSHIP IN AFRICA </p>
+			<p>Kenya Shillings Account: 0010185011830801</p>
+			<p>US Dollar Account: 0011025011830801 </p>
+							
 		</div>
 	</div><!-- /content -->
 
@@ -336,8 +317,8 @@
 		    <!-- panel content goes here -->
 		    <ul class="nav" data-role="listview" data-theme="none">
 		    	<li data-icon='home'><a href="#intro">Home</a></li>
-		    	<li data-icon='gear'><a href="#profile">Profile</a></li>
-		    	<li data-icon='lock'><a href="#">Log Out</a></li>
+		    	<!-- <li data-icon='gear'><a href="#profile">Profile</a></li> -->
+		    	<li data-icon='lock'><a class="logout" href="#">Log Out</a></li>
 		    	<li data-icon='delete'><a href="#" data-rel="close">Close Menu</a></li>
 		    </ul>
 		</div><!-- /panel -->
@@ -356,48 +337,46 @@
 
 	<div role="main" class="ui-content">
 		<div class="top-content center-text">
-			<img src="http://lorempixel.com/400/100" alt="#">
-			<p>About T.H.I.U</p>
+			<img src="images/header_image.png"  alt="#">
+			<p>Donations</p>
 		</div>
 		<div class="middle-content">
 			<p>Please fill the details below to make your donation</p>
-			<form id="credi-form" class="input-center" action="#" method="post" accept-charset="utf-8">
 			
-	
+			<form id="credit-form" data-ajax="false" class="input-center" action="/who" method="post" accept-charset="utf-8">
+			
+				<div class="payment-errors"></div>
+				
 				<div class="ui-field-contain">
-				    <input name="txt-email" id="txt-email" placeholder="First Name" value="" type="text">
+					
+						<input type="text" size="20" data-stripe="number" placeholder="Card Number"/>
+				
 				</div>
 				<div class="ui-field-contain">
-				    <input name="txt-email" id="txt-email" placeholder="Last Name" value="" type="text">
+					
+					     <input type="text" size="4" data-stripe="cvc" placeholder="CVC"/>
+					
 				</div>
 				<div class="ui-field-contain">
-				    <input name="txt-email" id="txt-email" placeholder="Billing Address" value="" type="text">
+					
+	                
+	                  <input data-inline="true" type="text" size="2" data-stripe="exp-month" placeholder="Expiration (MM)"/>
+	              </div>
+	              <div class="ui-field-contain">
+	                <input data-inline="true" type="text" size="4" data-stripe="exp-year" placeholder="Expiration (YY)"/>
 				</div>
 				<div class="ui-field-contain">
-				    <input name="txt-email" id="txt-email" placeholder="Country" value="" type="text">
-				</div>
-				<div class="ui-field-contain">
-				    <input name="txt-email" id="txt-email" placeholder="City" value="" type="text">
-				</div>
-				<div class="ui-field-contain">
-				    <input name="txt-email" id="txt-email" placeholder="State" value="" type="text">
-				</div>
-				<div class="ui-field-contain">
-				    <input name="txt-email" id="txt-email" placeholder="Zip Code" value="" type="text">
-				</div>
-				<div class="ui-field-contain">
-				    <input name="txt-email" id="txt-email" placeholder="Email" value="" type="email">
-				</div>
-				<div class="ui-field-contain">
-				    <input name="txt-email" id="txt-email" placeholder="Credit Card Number" value="" type="text">
+					<input name="txt-cr-amount" id="txt-cr-amount" placeholder="Amount To Donate(USD)" value="" type="number">
 				</div>
 
 				<div class="ui-field-contain">
-				    <button type="submit" id="btn-submit-credit" class="ui-shadow ui-btn ui-corner-all ui-mini ui-btn-icon-right ui-icon-arrow-r">Submit</button>
+				    
+				     <button type="submit" class="ui-shadow ui-btn ui-corner-all ui-mini ui-btn-icon-right ui-icon-arrow-r">Submit Payment</button>
 				</div>
 						
 		</form>
-
+		
+		
 		</div>
 		<div class="bottom-content">
 			
@@ -412,8 +391,8 @@
 		    <!-- panel content goes here -->
 		    <ul class="nav" data-role="listview" data-theme="none">
 		    	<li data-icon='home'><a href="#intro">Home</a></li>
-		    	<li data-icon='gear'><a href="#profile">Profile</a></li>
-		    	<li data-icon='lock'><a href="#">Log Out</a></li>
+<!-- 		    	<li data-icon='gear'><a href="#profile">Profile</a></li>
+ -->		    	<li data-icon='lock'><a class="logout" href="#">Log Out</a></li>
 		    	<li data-icon='delete'><a href="#" data-rel="close">Close Menu</a></li>
 		    </ul>
 		</div><!-- /panel -->
@@ -432,14 +411,11 @@
 
 	<div role="main" class="ui-content">
 		<div class="top-content center-text">
-			<img src="http://lorempixel.com/400/100" alt="#">
+			<img src="images/header_image.png" alt="#">
 			<p>Thank You</p>
 		</div>
 		<div class="middle-content center-text">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat.  </p>
+			<p>Thank you for you donation. You will be kept updated about the progress of the fundraising effort directly via email.</p>
 		</div>
 		<div class="bottom-content">
 			
@@ -454,8 +430,8 @@
 		    <!-- panel content goes here -->
 		    <ul class="nav" data-role="listview" data-theme="none">
 		    	<li data-icon='home'><a href="#intro">Home</a></li>
-		    	<li data-icon='gear'><a href="#profile">Profile</a></li>
-		    	<li data-icon='lock'><a href="#">Log Out</a></li>
+<!-- 		    	<li data-icon='gear'><a href="#profile">Profile</a></li>
+ -->		    	<li data-icon='lock'><a class="logout" href="#">Log Out</a></li>
 		    	<li data-icon='delete'><a href="#" data-rel="close">Close Menu</a></li>
 		    </ul>
 		</div><!-- /panel -->
@@ -490,12 +466,22 @@
 		    <!-- panel content goes here -->
 		    <ul class="nav" data-role="listview" data-theme="none">
 		    	<li data-icon='home'><a href="#intro">Home</a></li>
-		    	<li data-icon='gear'><a href="#profile">Profile</a></li>
-		    	<li data-icon='lock'><a href="#">Log Out</a></li>
+<!-- 		    	<li data-icon='gear'><a href="#profile">Profile</a></li>
+ -->		    	<li data-icon='lock'><a class="logout" href="#">Log Out</a></li>
 		    	<li data-icon='delete'><a href="#" data-rel="close">Close Menu</a></li>
 		    </ul>
 		</div><!-- /panel -->
 	<!-- endmenu -->
 </div><!-- /page -->
+<!-- <script type="text/javascript" src="cordova.js"></script> -->
+<script src="js/jquery-2.1.3.min.js"></script>
+	<script src="js/fastclick.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/additional-methods.min.js"></script>
+	<script type="text/javascript" src="js/stripe.js"></script>
+	<script src="app.js"></script>
+	<!-- <script src="jqm/jquery.mobile.custom.min.js"></script> -->
+	<script src="jqm-o/jquery.mobile-1.4.5.min.js"></script>
+	<!-- <script src="../platforms/android/platform_www/cordova.js"></script>	 -->
 </body>
 </html>

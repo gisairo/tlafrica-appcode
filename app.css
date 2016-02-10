@@ -338,23 +338,43 @@ label.error {
 		width: 80%;
 		margin: 0.5em auto 0 auto;
 	}
-	#register-form .errors,
-	#recovery-form .errors,
-	#errors{
-		display: none;
-		color: red;
-		font-size: 16px;
-		font-weight: normal;
-		line-height: 1.4;
-		margin-top: 0.5em;
-		width: 100%;
-		float: none;
-		text-shadow: none;
-		width: 77%;
-		padding: 2%;
-		margin: 0.5em auto 0 auto;
-		background: #ebebeb;
-		-webkit-border-radius: 5px;
-		-moz-border-radius: 5px;
-		border-radius: 5px;
-	}
+.payment-errors,	
+#register-form .errors,
+#recovery-form .errors,
+#errors{
+	display: none;
+	color: red;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1.4;
+	margin-top: 0.5em;
+	width: 100%;
+	float: none;
+	text-shadow: none;
+	width: 77%;
+	padding: 2%;
+	margin: 0.5em auto 0 auto;
+	background: #ebebeb;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+#credit-details .middle-content p,	
+#individual .bottom-content p,
+#individual .middle-content p{
+	width: 80%;
+	margin: 10px auto;
+	text-shadow: none;
+	font-weight: 600;
+}
+#credit-details .middle-content p{
+	color: #fff;
+}
+#intro .bottom-content p.weblink{
+	color: #000 !important;
+	margin-top: 10px !important;
+	padding: 10px;
+}
+#intro .bottom-content p.weblink a{
+	color: #000 !important;
+}
