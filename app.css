@@ -82,12 +82,14 @@ h1{
 	width: 100%;
 	max-width: 100%;
 	height: auto;
+	position: absolute;
+	bottom: 0;
 }
 .top-content p{
 	position: absolute;
 	z-index: 1;
 	background: rgba(0,0,0,0.5);
-	top: 54%;
+	bottom: 0;
 	margin: 0 auto;
 	width: 90%;
 	color: white;
@@ -190,7 +192,7 @@ html body .ui-group-theme-a .ui-bar-inherit{
 #intro a#btn-listing {
 	max-width: 300px;
 	border-radius: 3px;
-	margin: 0 auto;
+	margin: 0 10px;
 	background: #fdd341;
 	border: none;
 	text-shadow: none;
@@ -377,4 +379,34 @@ label.error {
 }
 #intro .bottom-content p.weblink a{
 	color: #000 !important;
+}
+.ui-mobile .ui-page{
+	/*max-width: 320px;*/
+}
+.ui-page-theme-a .ui-bar-inherit{
+	height: 60px;
+}
+#header .ui-btn{
+	height: 45px;
+	width: 45px;
+	-webkit-border-radius: 25%;
+	border-radius: 50%;
+}
+.ui-panel .nav li{
+	height: 60px;
+}
+.ui-panel .nav li a{
+	    height: 20px;
+    padding: 20px 16px;
+}
+.top-content{
+	    height: 100px;
+    overflow: hidden;
+}
+.top-content p{
+	/*top: ;*/
+}
+#intro.ui-page .ui-panel-wrapper .middle-content p{
+	padding:  0 10px;
+	line-height: 1.5;
 }
