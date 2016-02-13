@@ -314,7 +314,7 @@ html body .ui-group-theme-a .ui-bar-inherit{
 #tabs2 .pager a,
 #tabs .pager a{
 	font-size: 12px;
-	padding: 10px 47px;
+	padding: 10px 9.5%;
 	margin: 0;
 	background: rgba(17,16,17, 0.7);
 	border: none;
@@ -433,10 +433,10 @@ label.error {
 	margin: 0;
 }
 #listing .ui-navbar ul{
-	padding: 0 100px 0 0!important;
+	padding: 0 20% 0 0!important;
 }
 #listing #tabs2 .ui-navbar ul{
-	padding: 0 0 0 100px!important;
+	padding: 0 0 0 20% !important;
 }
 #tabs2{
 	display: none;
