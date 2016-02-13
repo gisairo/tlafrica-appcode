@@ -264,13 +264,70 @@ $(function(){
 
 				});
 			});
+			$('#sixes').click(function (e) {
+				$.getJSON(api_url+'all-app-hills/501', function(hillsets){
+				// $.each(sets, function(){ addItem('myset', this); 
+					// console.log(hillsets);
+					$('#six ul').html(hillsets);
+
+				});
+			});
+			$('#sevens').click(function (e) {
+				$.getJSON(api_url+'all-app-hills/601', function(hillsets){
+				// $.each(sets, function(){ addItem('myset', this); 
+					// console.log(hillsets);
+					$('#seven ul').html(hillsets);
+
+				});
+			});
+			$('#eights').click(function (e) {
+				$.getJSON(api_url+'all-app-hills/701', function(hillsets){
+				// $.each(sets, function(){ addItem('myset', this); 
+					// console.log(hillsets);
+					$('#eight ul').html(hillsets);
+
+				});
+			});
+			$('#nines').click(function (e) {
+				$.getJSON(api_url+'all-app-hills/801', function(hillsets){
+				// $.each(sets, function(){ addItem('myset', this); 
+					// console.log(hillsets);
+					$('#nine ul').html(hillsets);
+
+				});
+			});
+			$('#tens').click(function (e) {
+				$.getJSON(api_url+'all-app-hills/901', function(hillsets){
+				// $.each(sets, function(){ addItem('myset', this); 
+					// console.log(hillsets);
+					$('#ten ul').html(hillsets);
+
+				});
+			});
+			$('#set2').click(function (e) {
+				e.preventDefault();
+				$('#tabs').hide(); $('#tabs2').slideDown();
+				$.getJSON(api_url+'all-app-hills/501', function(hillsets){
+				// $.each(sets, function(){ addItem('myset', this); 
+					// console.log(hillsets);
+					$('#six ul').html(hillsets);
+
+				});
+
+			});
+			$('#prevset').click(function (e) {
+				e.preventDefault();
+				$('#tabs2').hide(); $('#tabs').slideDown();
+				
+
+			});
 			$(document).on("click", ".hlist ul li a" ,function (event) {
 			    var mtid= $(this).attr("data-id");
 			    localStorage.setItem('mountain_id', mtid);
 			    $(':mobile-pagecontainer').pagecontainer('change', '#individual', {
 			        transition: 'slide',
 			        changeHash: true,
-			        reverse: true,
+			        reverse: false,
 			        showLoadMsg: true
 			    }); 
 			});

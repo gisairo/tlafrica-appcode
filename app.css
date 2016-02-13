@@ -86,16 +86,16 @@ h1{
 	bottom: 0;
 }
 .top-content p{
-	position: absolute;
+	/*position: absolute;*/
 	z-index: 1;
-	background: rgba(0,0,0,0.5);
-	bottom: 0;
-	margin: 0 auto;
-	width: 90%;
-	color: white;
-	display: block;
-	padding: 2.5% 5%;
-	font-size: 30px;
+	/*background: rgba(0,0,0,0.5);*/
+	/*bottom: 0;*/
+	/*margin: 0 auto;*/
+	/*width: 90%;*/
+	/*color: white;*/
+	/*display: block;*/
+	/*padding: 2.5% 5%;*/
+	/*font-size: 30px;*/
 	text-shadow: none;
 }
 
@@ -190,7 +190,7 @@ html body .ui-group-theme-a .ui-bar-inherit{
 	background-color: #555555;
 }
 #intro a#btn-listing {
-	max-width: 300px;
+	max-width: 84%;
 	border-radius: 3px;
 	margin: 0 10px;
 	background: #fdd341;
@@ -209,6 +209,8 @@ html body .ui-group-theme-a .ui-bar-inherit{
 }
 .socialmedia{
 	list-style: none;
+	    margin: 10px auto;
+    padding: 0;
 }
 .socialmedia li{
 	display: inline;
@@ -298,7 +300,8 @@ html body .ui-group-theme-a .ui-bar-inherit{
 	position: absolute;
 	top: 0;
 	width: 100%;
-	z-index: -1;
+	/*z-index: -1;*/
+	display: block;
 }
 .pager span:last-child,
 .pager span:first-child{
@@ -308,9 +311,10 @@ html body .ui-group-theme-a .ui-bar-inherit{
 	/*top: 0;*/
 	display: inline-block;
 }
+#tabs2 .pager a,
 #tabs .pager a{
 	font-size: 12px;
-	padding: 10px 12px;
+	padding: 10px 47px;
 	margin: 0;
 	background: rgba(17,16,17, 0.7);
 	border: none;
@@ -321,11 +325,20 @@ html body .ui-group-theme-a .ui-bar-inherit{
 	left: 0;
 	top: 0;
 }
+#tabs2.page a.back2,
 #tabs .pager a.back2{
 	right: 0;
 	left: auto;
 	position: absolute;
 	top: 0;
+	display: block;
+
+}
+#tabs2 .pager a{
+
+}
+#tabs2.page a.back2{
+
 }
 
 label.error {
@@ -376,6 +389,7 @@ label.error {
 	color: #000 !important;
 	margin-top: 10px !important;
 	padding: 10px;
+	margin-bottom: 0;
 }
 #intro .bottom-content p.weblink a{
 	color: #000 !important;
@@ -409,4 +423,21 @@ label.error {
 #intro.ui-page .ui-panel-wrapper .middle-content p{
 	padding:  0 10px;
 	line-height: 1.5;
+	text-align: justify;
+}
+#intro p.page-title{
+	font-size: 30px;
+	text-align: center !important;
+}
+.otherplaces{
+	margin: 0;
+}
+#listing .ui-navbar ul{
+	padding: 0 100px 0 0!important;
+}
+#listing #tabs2 .ui-navbar ul{
+	padding: 0 0 0 100px!important;
+}
+#tabs2{
+	display: none;
 }

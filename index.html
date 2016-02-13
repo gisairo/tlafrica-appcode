@@ -9,9 +9,6 @@
 	<!-- <link rel="stylesheet" href="jqm/jquery.mobile.custom.theme.min.css" /> -->
 	<link rel="stylesheet" href="jqm-o/jquery.mobile-1.4.5.min.css" />
 	<link rel="stylesheet" type="text/css" href="app.css">
-	
-	
-
 </head>
 <body>
 
@@ -161,16 +158,18 @@
 	<div role="main" class="ui-content">
 		<div class="top-content center-text">
 			<img src="images/header_image.png" alt="#">
-			<p>About T.H.I.U</p>
+			
 		</div>
 		<div class="middle-content">
-			<p> TLAfrica and friends are raising funds to build 1000 hills university in Rwanda. This app is a major part of that effort, because it enables you to donate directly to this effort via your phone using your credit card and paypal.</p>
+			<p class="page-title">About T.H.I.U</p>
+			<p> TLAfrica and friends are raising funds to build the Thousand Hills International University(THIU) in Rwanda. This app is a major part of that effort, because it enables you to donate directly to this effort via your phone using your credit card and paypal.</p>
 			<p>Click on the yellow contribute to a hill button below to be taken to a list of hills you can choose to donate to. Click on each hill to get more information about that hill</p>
 		</div>
 		
 		<p><a href="#listing" id="btn-listing" class="ui-btn ui-btn-icon-right ui-icon-arrow-r">Contribute to a hill</a></p>
 		<div class="bottom-content center-text">
-			<p class="weblink">Website: <a href="http://tlafrica.org/" target="_blank">http://tlafrica.org</a></p>
+			<p class="weblink">For more about TLAfrica, please visit our website: <a class="ui-btn ui-btn-icon-right ui-icon-arrow-r" href="http://tlafrica.org/" target="_blank">http://tlafrica.org</a></p>
+			<p class="otherplaces"> Other places you can find us:</p>
 			<ul class="socialmedia">
 				<li><a href="https://www.facebook.com/TLAfrica.org" id="facebook" target="_blank">Facebook</a></li>
 				<li><a href="https://twitter.com/tlafrica" id="twitter" target="_blank">Twitter</a></li>
@@ -198,9 +197,10 @@
 <div data-role="page" id="listing">
 
 	<div data-role="header" id="header" data-add-back-btn="true">
-		<!-- <input data-icon="back" data-iconpos="left" value="" type="button"> -->
+	<a href="#intro" class="ui-btn ui-btn-left ui-corner-all ui-btn-inline ui-icon-carat-l ui-btn-icon-notext"></a>
 		<h1>THIU</h1>
 		<a href="#mypanelmenu" class="ui-btn ui-btn-right ui-corner-all ui-btn-icon-right ui-btn-inline ui-icon-bars ui-btn-icon-notext"></a>
+		
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
@@ -214,44 +214,117 @@
 						    <li><a id="threes" href="#three" data-ajax="false">three</a></li>
 						    <li><a id="fours" href="#four" data-ajax="false">four</a></li>
 						    <li><a id="fives" href="#five" data-ajax="false">five</a></li>
-						    
+						   
+
 				    </ul>
-				    <div class="pager">
-				    	<span>
-				    		<a class="back" href="#v"><</a>
-					    </span>
-					</div>
-					<div class="pager">
-					    <span><a class="back2" href="#v">></a></span>
-					    	
-					</div>
 				 </div>
+				 <span class="pager"> <a class="back2" id="set2" href="#set2">></a></span>
+				<p> Chooose a hill whose occupants your funds will support</p>
 			</div>
 			<div class="middle-content">
-				<div id="one" class="hlist">
-					<ul data-role="listview" data-inset="true">
-				        
-				    </ul>
+				<div id="set1">
+					<div id="one" class="hlist">
+						<ul data-role="listview" data-inset="true">
+					        
+					    </ul>
+					</div>
+					<div id="two" class="hlist">
+						<ul data-role="listview" data-inset="true">
+					       
+					    </ul>
+					</div>
+					<div id="three" class="hlist">
+						<ul data-role="listview" data-inset="true">
+					        
+					    </ul>
+					</div>
+					<div id="four" class="hlist">
+						<ul data-role="listview" data-inset="true">
+					        
+					    </ul>
+					</div>
+					<div id="five" class="hlist">
+						<ul data-role="listview" data-inset="true">
+					        
+					    </ul>
+					</div>
 				</div>
-				<div id="two" class="hlist">
-					<ul data-role="listview" data-inset="true">
-				       
-				    </ul>
+				<div id="set2">
+					<div id="six" class="hlist">
+						<ul data-role="listview" data-inset="true">
+					        
+					    </ul>
+					</div>
+					<div id="seven" class="hlist">
+						<ul data-role="listview" data-inset="true">
+					       
+					    </ul>
+					</div>
+					<div id="eight" class="hlist">
+						<ul data-role="listview" data-inset="true">
+					        
+					    </ul>
+					</div>
+					<div id="nine" class="hlist">
+						<ul data-role="listview" data-inset="true">
+					        
+					    </ul>
+					</div>
+					<div id="ten" class="hlist">
+						<ul data-role="listview" data-inset="true">
+					        
+					    </ul>
+					</div>
 				</div>
-				<div id="three" class="hlist">
-					<ul data-role="listview" data-inset="true">
-				        
+			</div>
+			<div class="bottom-content">
+			</div>
+		</div>
+		<div data-role="tabs" id="tabs2">
+			<div class="top-content center-text">
+				<div data-role="navbar">
+				    <ul>
+				    		
+						    <li><a id="sixes" href="#six" data-ajax="false">six</a></li>
+						    <li><a id="sevens" href="#seven" data-ajax="false">seven</a></li>
+						    <li><a id="eights" href="#eight" data-ajax="false">eight</a></li>
+						    <li><a id="nines" href="#nine" data-ajax="false">nine</a></li>
+						    <li><a id="tens" href="#ten" data-ajax="false">ten</a></li>
+						   
+
 				    </ul>
-				</div>
-				<div id="four" class="hlist">
-					<ul data-role="listview" data-inset="true">
-				        
-				    </ul>
-				</div>
-				<div id="five" class="hlist">
-					<ul data-role="listview" data-inset="true">
-				        
-				    </ul>
+				 </div>
+				 <span class="pager"> <a class="back2" id="prevset" href="#"><</a></span>
+				<p> Chooose a hill whose occupants your funds will support</p>
+			</div>
+			<div class="middle-content">
+				
+				<div id="set2">
+					<div id="six" class="hlist">
+						<ul data-role="listview" data-inset="true">
+					        
+					    </ul>
+					</div>
+					<div id="seven" class="hlist">
+						<ul data-role="listview" data-inset="true">
+					       
+					    </ul>
+					</div>
+					<div id="eight" class="hlist">
+						<ul data-role="listview" data-inset="true">
+					        
+					    </ul>
+					</div>
+					<div id="nine" class="hlist">
+						<ul data-role="listview" data-inset="true">
+					        
+					    </ul>
+					</div>
+					<div id="ten" class="hlist">
+						<ul data-role="listview" data-inset="true">
+					        
+					    </ul>
+					</div>
 				</div>
 			</div>
 			<div class="bottom-content">
